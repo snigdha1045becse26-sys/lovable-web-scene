@@ -10,33 +10,539 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as EmployerRouteImport } from './routes/employer'
+import { Route as EmployersRouteImport } from './routes/employers'
+import { Route as FeaturesRouteImport } from './routes/features'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as StudentRouteImport } from './routes/student'
+import { Route as StudentsRouteImport } from './routes/students'
+import { Route as EmployerIndexRouteImport } from './routes/employer.index'
+import { Route as EmployerBlindRouteImport } from './routes/employer.blind'
+import { Route as EmployerCompareRouteImport } from './routes/employer.compare'
+import { Route as EmployerEvidenceRouteImport } from './routes/employer.evidence'
+import { Route as EmployerInterviewRouteImport } from './routes/employer.interview'
+import { Route as EmployerInvitationsRouteImport } from './routes/employer.invitations'
+import { Route as EmployerSettingsRouteImport } from './routes/employer.settings'
+import { Route as EmployerShortlistedRouteImport } from './routes/employer.shortlisted'
+import { Route as EmployerSubmissionsRouteImport } from './routes/employer.submissions'
+import { Route as StudentIndexRouteImport } from './routes/student.index'
+import { Route as StudentAiTransparencyRouteImport } from './routes/student.ai-transparency'
+import { Route as StudentConfidenceRouteImport } from './routes/student.confidence'
+import { Route as StudentExplainRouteImport } from './routes/student.explain'
+import { Route as StudentGrowthRouteImport } from './routes/student.growth'
+import { Route as StudentJourneyRouteImport } from './routes/student.journey'
+import { Route as StudentOpportunitiesRouteImport } from './routes/student.opportunities'
+import { Route as StudentPassportRouteImport } from './routes/student.passport'
+import { Route as StudentProfileRouteImport } from './routes/student.profile'
+import { Route as StudentRoadmapRouteImport } from './routes/student.roadmap'
+import { Route as StudentSettingsRouteImport } from './routes/student.settings'
+import { Route as StudentSubmissionsRouteImport } from './routes/student.submissions'
+import { Route as StudentTeamRouteImport } from './routes/student.team'
+import { Route as EmployerCandidatesIndexRouteImport } from './routes/employer.candidates.index'
+import { Route as EmployerChallengesIndexRouteImport } from './routes/employer.challenges.index'
+import { Route as EmployerChallengesNewRouteImport } from './routes/employer.challenges.new'
+import { Route as StudentChallengesIndexRouteImport } from './routes/student.challenges.index'
+import { Route as StudentVerificationIndexRouteImport } from './routes/student.verification.index'
+import { Route as StudentVerificationIdRouteImport } from './routes/student.verification.$id'
+import { Route as EmployerCandidatesIdIndexRouteImport } from './routes/employer.candidates.$id.index'
+import { Route as EmployerCandidatesIdPassportRouteImport } from './routes/employer.candidates.$id.passport'
+import { Route as StudentChallengesIdIndexRouteImport } from './routes/student.challenges.$id.index'
+import { Route as StudentChallengesIdWorkspaceRouteImport } from './routes/student.challenges.$id.workspace'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployerRoute = EmployerRouteImport.update({
+  id: '/employer',
+  path: '/employer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployersRoute = EmployersRouteImport.update({
+  id: '/employers',
+  path: '/employers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeaturesRoute = FeaturesRouteImport.update({
+  id: '/features',
+  path: '/features',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentRoute = StudentRouteImport.update({
+  id: '/student',
+  path: '/student',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudentsRoute = StudentsRouteImport.update({
+  id: '/students',
+  path: '/students',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployerIndexRoute = EmployerIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerBlindRoute = EmployerBlindRouteImport.update({
+  id: '/blind',
+  path: '/blind',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerCompareRoute = EmployerCompareRouteImport.update({
+  id: '/compare',
+  path: '/compare',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerEvidenceRoute = EmployerEvidenceRouteImport.update({
+  id: '/evidence',
+  path: '/evidence',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerInterviewRoute = EmployerInterviewRouteImport.update({
+  id: '/interview',
+  path: '/interview',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerInvitationsRoute = EmployerInvitationsRouteImport.update({
+  id: '/invitations',
+  path: '/invitations',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerSettingsRoute = EmployerSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerShortlistedRoute = EmployerShortlistedRouteImport.update({
+  id: '/shortlisted',
+  path: '/shortlisted',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerSubmissionsRoute = EmployerSubmissionsRouteImport.update({
+  id: '/submissions',
+  path: '/submissions',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const StudentIndexRoute = StudentIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentAiTransparencyRoute = StudentAiTransparencyRouteImport.update({
+  id: '/ai-transparency',
+  path: '/ai-transparency',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentConfidenceRoute = StudentConfidenceRouteImport.update({
+  id: '/confidence',
+  path: '/confidence',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentExplainRoute = StudentExplainRouteImport.update({
+  id: '/explain',
+  path: '/explain',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentGrowthRoute = StudentGrowthRouteImport.update({
+  id: '/growth',
+  path: '/growth',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentJourneyRoute = StudentJourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentOpportunitiesRoute = StudentOpportunitiesRouteImport.update({
+  id: '/opportunities',
+  path: '/opportunities',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentPassportRoute = StudentPassportRouteImport.update({
+  id: '/passport',
+  path: '/passport',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentProfileRoute = StudentProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentRoadmapRoute = StudentRoadmapRouteImport.update({
+  id: '/roadmap',
+  path: '/roadmap',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentSettingsRoute = StudentSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentSubmissionsRoute = StudentSubmissionsRouteImport.update({
+  id: '/submissions',
+  path: '/submissions',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentTeamRoute = StudentTeamRouteImport.update({
+  id: '/team',
+  path: '/team',
+  getParentRoute: () => StudentRoute,
+} as any)
+const EmployerCandidatesIndexRoute = EmployerCandidatesIndexRouteImport.update({
+  id: '/candidates/',
+  path: '/candidates/',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerChallengesIndexRoute = EmployerChallengesIndexRouteImport.update({
+  id: '/challenges/',
+  path: '/challenges/',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const EmployerChallengesNewRoute = EmployerChallengesNewRouteImport.update({
+  id: '/challenges/new',
+  path: '/challenges/new',
+  getParentRoute: () => EmployerRoute,
+} as any)
+const StudentChallengesIndexRoute = StudentChallengesIndexRouteImport.update({
+  id: '/challenges/',
+  path: '/challenges/',
+  getParentRoute: () => StudentRoute,
+} as any)
+const StudentVerificationIndexRoute =
+  StudentVerificationIndexRouteImport.update({
+    id: '/verification/',
+    path: '/verification/',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentVerificationIdRoute = StudentVerificationIdRouteImport.update({
+  id: '/verification/$id',
+  path: '/verification/$id',
+  getParentRoute: () => StudentRoute,
+} as any)
+const EmployerCandidatesIdIndexRoute =
+  EmployerCandidatesIdIndexRouteImport.update({
+    id: '/candidates/$id/',
+    path: '/candidates/$id/',
+    getParentRoute: () => EmployerRoute,
+  } as any)
+const EmployerCandidatesIdPassportRoute =
+  EmployerCandidatesIdPassportRouteImport.update({
+    id: '/candidates/$id/passport',
+    path: '/candidates/$id/passport',
+    getParentRoute: () => EmployerRoute,
+  } as any)
+const StudentChallengesIdIndexRoute =
+  StudentChallengesIdIndexRouteImport.update({
+    id: '/challenges/$id/',
+    path: '/challenges/$id/',
+    getParentRoute: () => StudentRoute,
+  } as any)
+const StudentChallengesIdWorkspaceRoute =
+  StudentChallengesIdWorkspaceRouteImport.update({
+    id: '/challenges/$id/workspace',
+    path: '/challenges/$id/workspace',
+    getParentRoute: () => StudentRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/employer': typeof EmployerRouteWithChildren
+  '/employers': typeof EmployersRoute
+  '/features': typeof FeaturesRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/student': typeof StudentRouteWithChildren
+  '/students': typeof StudentsRoute
+  '/employer/blind': typeof EmployerBlindRoute
+  '/employer/compare': typeof EmployerCompareRoute
+  '/employer/evidence': typeof EmployerEvidenceRoute
+  '/employer/interview': typeof EmployerInterviewRoute
+  '/employer/invitations': typeof EmployerInvitationsRoute
+  '/employer/settings': typeof EmployerSettingsRoute
+  '/employer/shortlisted': typeof EmployerShortlistedRoute
+  '/employer/submissions': typeof EmployerSubmissionsRoute
+  '/student/ai-transparency': typeof StudentAiTransparencyRoute
+  '/student/confidence': typeof StudentConfidenceRoute
+  '/student/explain': typeof StudentExplainRoute
+  '/student/growth': typeof StudentGrowthRoute
+  '/student/journey': typeof StudentJourneyRoute
+  '/student/opportunities': typeof StudentOpportunitiesRoute
+  '/student/passport': typeof StudentPassportRoute
+  '/student/profile': typeof StudentProfileRoute
+  '/student/roadmap': typeof StudentRoadmapRoute
+  '/student/settings': typeof StudentSettingsRoute
+  '/student/submissions': typeof StudentSubmissionsRoute
+  '/student/team': typeof StudentTeamRoute
+  '/employer/': typeof EmployerIndexRoute
+  '/student/': typeof StudentIndexRoute
+  '/employer/challenges/new': typeof EmployerChallengesNewRoute
+  '/student/verification/$id': typeof StudentVerificationIdRoute
+  '/employer/candidates/': typeof EmployerCandidatesIndexRoute
+  '/employer/challenges/': typeof EmployerChallengesIndexRoute
+  '/student/challenges/': typeof StudentChallengesIndexRoute
+  '/student/verification/': typeof StudentVerificationIndexRoute
+  '/employer/candidates/$id/passport': typeof EmployerCandidatesIdPassportRoute
+  '/student/challenges/$id/workspace': typeof StudentChallengesIdWorkspaceRoute
+  '/employer/candidates/$id/': typeof EmployerCandidatesIdIndexRoute
+  '/student/challenges/$id/': typeof StudentChallengesIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/employers': typeof EmployersRoute
+  '/features': typeof FeaturesRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/students': typeof StudentsRoute
+  '/employer/blind': typeof EmployerBlindRoute
+  '/employer/compare': typeof EmployerCompareRoute
+  '/employer/evidence': typeof EmployerEvidenceRoute
+  '/employer/interview': typeof EmployerInterviewRoute
+  '/employer/invitations': typeof EmployerInvitationsRoute
+  '/employer/settings': typeof EmployerSettingsRoute
+  '/employer/shortlisted': typeof EmployerShortlistedRoute
+  '/employer/submissions': typeof EmployerSubmissionsRoute
+  '/student/ai-transparency': typeof StudentAiTransparencyRoute
+  '/student/confidence': typeof StudentConfidenceRoute
+  '/student/explain': typeof StudentExplainRoute
+  '/student/growth': typeof StudentGrowthRoute
+  '/student/journey': typeof StudentJourneyRoute
+  '/student/opportunities': typeof StudentOpportunitiesRoute
+  '/student/passport': typeof StudentPassportRoute
+  '/student/profile': typeof StudentProfileRoute
+  '/student/roadmap': typeof StudentRoadmapRoute
+  '/student/settings': typeof StudentSettingsRoute
+  '/student/submissions': typeof StudentSubmissionsRoute
+  '/student/team': typeof StudentTeamRoute
+  '/employer': typeof EmployerIndexRoute
+  '/student': typeof StudentIndexRoute
+  '/employer/challenges/new': typeof EmployerChallengesNewRoute
+  '/student/verification/$id': typeof StudentVerificationIdRoute
+  '/employer/candidates': typeof EmployerCandidatesIndexRoute
+  '/employer/challenges': typeof EmployerChallengesIndexRoute
+  '/student/challenges': typeof StudentChallengesIndexRoute
+  '/student/verification': typeof StudentVerificationIndexRoute
+  '/employer/candidates/$id/passport': typeof EmployerCandidatesIdPassportRoute
+  '/student/challenges/$id/workspace': typeof StudentChallengesIdWorkspaceRoute
+  '/employer/candidates/$id': typeof EmployerCandidatesIdIndexRoute
+  '/student/challenges/$id': typeof StudentChallengesIdIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/employer': typeof EmployerRouteWithChildren
+  '/employers': typeof EmployersRoute
+  '/features': typeof FeaturesRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/student': typeof StudentRouteWithChildren
+  '/students': typeof StudentsRoute
+  '/employer/blind': typeof EmployerBlindRoute
+  '/employer/compare': typeof EmployerCompareRoute
+  '/employer/evidence': typeof EmployerEvidenceRoute
+  '/employer/interview': typeof EmployerInterviewRoute
+  '/employer/invitations': typeof EmployerInvitationsRoute
+  '/employer/settings': typeof EmployerSettingsRoute
+  '/employer/shortlisted': typeof EmployerShortlistedRoute
+  '/employer/submissions': typeof EmployerSubmissionsRoute
+  '/student/ai-transparency': typeof StudentAiTransparencyRoute
+  '/student/confidence': typeof StudentConfidenceRoute
+  '/student/explain': typeof StudentExplainRoute
+  '/student/growth': typeof StudentGrowthRoute
+  '/student/journey': typeof StudentJourneyRoute
+  '/student/opportunities': typeof StudentOpportunitiesRoute
+  '/student/passport': typeof StudentPassportRoute
+  '/student/profile': typeof StudentProfileRoute
+  '/student/roadmap': typeof StudentRoadmapRoute
+  '/student/settings': typeof StudentSettingsRoute
+  '/student/submissions': typeof StudentSubmissionsRoute
+  '/student/team': typeof StudentTeamRoute
+  '/employer/': typeof EmployerIndexRoute
+  '/student/': typeof StudentIndexRoute
+  '/employer/challenges/new': typeof EmployerChallengesNewRoute
+  '/student/verification/$id': typeof StudentVerificationIdRoute
+  '/employer/candidates/': typeof EmployerCandidatesIndexRoute
+  '/employer/challenges/': typeof EmployerChallengesIndexRoute
+  '/student/challenges/': typeof StudentChallengesIndexRoute
+  '/student/verification/': typeof StudentVerificationIndexRoute
+  '/employer/candidates/$id/passport': typeof EmployerCandidatesIdPassportRoute
+  '/student/challenges/$id/workspace': typeof StudentChallengesIdWorkspaceRoute
+  '/employer/candidates/$id/': typeof EmployerCandidatesIdIndexRoute
+  '/student/challenges/$id/': typeof StudentChallengesIdIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/employer'
+    | '/employers'
+    | '/features'
+    | '/how-it-works'
+    | '/login'
+    | '/register'
+    | '/student'
+    | '/students'
+    | '/employer/blind'
+    | '/employer/compare'
+    | '/employer/evidence'
+    | '/employer/interview'
+    | '/employer/invitations'
+    | '/employer/settings'
+    | '/employer/shortlisted'
+    | '/employer/submissions'
+    | '/student/ai-transparency'
+    | '/student/confidence'
+    | '/student/explain'
+    | '/student/growth'
+    | '/student/journey'
+    | '/student/opportunities'
+    | '/student/passport'
+    | '/student/profile'
+    | '/student/roadmap'
+    | '/student/settings'
+    | '/student/submissions'
+    | '/student/team'
+    | '/employer/'
+    | '/student/'
+    | '/employer/challenges/new'
+    | '/student/verification/$id'
+    | '/employer/candidates/'
+    | '/employer/challenges/'
+    | '/student/challenges/'
+    | '/student/verification/'
+    | '/employer/candidates/$id/passport'
+    | '/student/challenges/$id/workspace'
+    | '/employer/candidates/$id/'
+    | '/student/challenges/$id/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/employers'
+    | '/features'
+    | '/how-it-works'
+    | '/login'
+    | '/register'
+    | '/students'
+    | '/employer/blind'
+    | '/employer/compare'
+    | '/employer/evidence'
+    | '/employer/interview'
+    | '/employer/invitations'
+    | '/employer/settings'
+    | '/employer/shortlisted'
+    | '/employer/submissions'
+    | '/student/ai-transparency'
+    | '/student/confidence'
+    | '/student/explain'
+    | '/student/growth'
+    | '/student/journey'
+    | '/student/opportunities'
+    | '/student/passport'
+    | '/student/profile'
+    | '/student/roadmap'
+    | '/student/settings'
+    | '/student/submissions'
+    | '/student/team'
+    | '/employer'
+    | '/student'
+    | '/employer/challenges/new'
+    | '/student/verification/$id'
+    | '/employer/candidates'
+    | '/employer/challenges'
+    | '/student/challenges'
+    | '/student/verification'
+    | '/employer/candidates/$id/passport'
+    | '/student/challenges/$id/workspace'
+    | '/employer/candidates/$id'
+    | '/student/challenges/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/employer'
+    | '/employers'
+    | '/features'
+    | '/how-it-works'
+    | '/login'
+    | '/register'
+    | '/student'
+    | '/students'
+    | '/employer/blind'
+    | '/employer/compare'
+    | '/employer/evidence'
+    | '/employer/interview'
+    | '/employer/invitations'
+    | '/employer/settings'
+    | '/employer/shortlisted'
+    | '/employer/submissions'
+    | '/student/ai-transparency'
+    | '/student/confidence'
+    | '/student/explain'
+    | '/student/growth'
+    | '/student/journey'
+    | '/student/opportunities'
+    | '/student/passport'
+    | '/student/profile'
+    | '/student/roadmap'
+    | '/student/settings'
+    | '/student/submissions'
+    | '/student/team'
+    | '/employer/'
+    | '/student/'
+    | '/employer/challenges/new'
+    | '/student/verification/$id'
+    | '/employer/candidates/'
+    | '/employer/challenges/'
+    | '/student/challenges/'
+    | '/student/verification/'
+    | '/employer/candidates/$id/passport'
+    | '/student/challenges/$id/workspace'
+    | '/employer/candidates/$id/'
+    | '/student/challenges/$id/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  EmployerRoute: typeof EmployerRouteWithChildren
+  EmployersRoute: typeof EmployersRoute
+  FeaturesRoute: typeof FeaturesRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  LoginRoute: typeof LoginRoute
+  RegisterRoute: typeof RegisterRoute
+  StudentRoute: typeof StudentRouteWithChildren
+  StudentsRoute: typeof StudentsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +554,390 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/employer': {
+      id: '/employer'
+      path: '/employer'
+      fullPath: '/employer'
+      preLoaderRoute: typeof EmployerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/employers': {
+      id: '/employers'
+      path: '/employers'
+      fullPath: '/employers'
+      preLoaderRoute: typeof EmployersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/features': {
+      id: '/features'
+      path: '/features'
+      fullPath: '/features'
+      preLoaderRoute: typeof FeaturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/student': {
+      id: '/student'
+      path: '/student'
+      fullPath: '/student'
+      preLoaderRoute: typeof StudentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/students': {
+      id: '/students'
+      path: '/students'
+      fullPath: '/students'
+      preLoaderRoute: typeof StudentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/employer/': {
+      id: '/employer/'
+      path: '/'
+      fullPath: '/employer/'
+      preLoaderRoute: typeof EmployerIndexRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/blind': {
+      id: '/employer/blind'
+      path: '/blind'
+      fullPath: '/employer/blind'
+      preLoaderRoute: typeof EmployerBlindRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/compare': {
+      id: '/employer/compare'
+      path: '/compare'
+      fullPath: '/employer/compare'
+      preLoaderRoute: typeof EmployerCompareRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/evidence': {
+      id: '/employer/evidence'
+      path: '/evidence'
+      fullPath: '/employer/evidence'
+      preLoaderRoute: typeof EmployerEvidenceRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/interview': {
+      id: '/employer/interview'
+      path: '/interview'
+      fullPath: '/employer/interview'
+      preLoaderRoute: typeof EmployerInterviewRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/invitations': {
+      id: '/employer/invitations'
+      path: '/invitations'
+      fullPath: '/employer/invitations'
+      preLoaderRoute: typeof EmployerInvitationsRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/settings': {
+      id: '/employer/settings'
+      path: '/settings'
+      fullPath: '/employer/settings'
+      preLoaderRoute: typeof EmployerSettingsRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/shortlisted': {
+      id: '/employer/shortlisted'
+      path: '/shortlisted'
+      fullPath: '/employer/shortlisted'
+      preLoaderRoute: typeof EmployerShortlistedRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/submissions': {
+      id: '/employer/submissions'
+      path: '/submissions'
+      fullPath: '/employer/submissions'
+      preLoaderRoute: typeof EmployerSubmissionsRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/student/': {
+      id: '/student/'
+      path: '/'
+      fullPath: '/student/'
+      preLoaderRoute: typeof StudentIndexRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/ai-transparency': {
+      id: '/student/ai-transparency'
+      path: '/ai-transparency'
+      fullPath: '/student/ai-transparency'
+      preLoaderRoute: typeof StudentAiTransparencyRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/confidence': {
+      id: '/student/confidence'
+      path: '/confidence'
+      fullPath: '/student/confidence'
+      preLoaderRoute: typeof StudentConfidenceRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/explain': {
+      id: '/student/explain'
+      path: '/explain'
+      fullPath: '/student/explain'
+      preLoaderRoute: typeof StudentExplainRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/growth': {
+      id: '/student/growth'
+      path: '/growth'
+      fullPath: '/student/growth'
+      preLoaderRoute: typeof StudentGrowthRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/journey': {
+      id: '/student/journey'
+      path: '/journey'
+      fullPath: '/student/journey'
+      preLoaderRoute: typeof StudentJourneyRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/opportunities': {
+      id: '/student/opportunities'
+      path: '/opportunities'
+      fullPath: '/student/opportunities'
+      preLoaderRoute: typeof StudentOpportunitiesRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/passport': {
+      id: '/student/passport'
+      path: '/passport'
+      fullPath: '/student/passport'
+      preLoaderRoute: typeof StudentPassportRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/profile': {
+      id: '/student/profile'
+      path: '/profile'
+      fullPath: '/student/profile'
+      preLoaderRoute: typeof StudentProfileRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/roadmap': {
+      id: '/student/roadmap'
+      path: '/roadmap'
+      fullPath: '/student/roadmap'
+      preLoaderRoute: typeof StudentRoadmapRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/settings': {
+      id: '/student/settings'
+      path: '/settings'
+      fullPath: '/student/settings'
+      preLoaderRoute: typeof StudentSettingsRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/submissions': {
+      id: '/student/submissions'
+      path: '/submissions'
+      fullPath: '/student/submissions'
+      preLoaderRoute: typeof StudentSubmissionsRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/team': {
+      id: '/student/team'
+      path: '/team'
+      fullPath: '/student/team'
+      preLoaderRoute: typeof StudentTeamRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/employer/candidates/': {
+      id: '/employer/candidates/'
+      path: '/candidates'
+      fullPath: '/employer/candidates/'
+      preLoaderRoute: typeof EmployerCandidatesIndexRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/challenges/': {
+      id: '/employer/challenges/'
+      path: '/challenges'
+      fullPath: '/employer/challenges/'
+      preLoaderRoute: typeof EmployerChallengesIndexRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/challenges/new': {
+      id: '/employer/challenges/new'
+      path: '/challenges/new'
+      fullPath: '/employer/challenges/new'
+      preLoaderRoute: typeof EmployerChallengesNewRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/student/challenges/': {
+      id: '/student/challenges/'
+      path: '/challenges'
+      fullPath: '/student/challenges/'
+      preLoaderRoute: typeof StudentChallengesIndexRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/verification/': {
+      id: '/student/verification/'
+      path: '/verification'
+      fullPath: '/student/verification/'
+      preLoaderRoute: typeof StudentVerificationIndexRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/verification/$id': {
+      id: '/student/verification/$id'
+      path: '/verification/$id'
+      fullPath: '/student/verification/$id'
+      preLoaderRoute: typeof StudentVerificationIdRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/employer/candidates/$id/': {
+      id: '/employer/candidates/$id/'
+      path: '/candidates/$id'
+      fullPath: '/employer/candidates/$id/'
+      preLoaderRoute: typeof EmployerCandidatesIdIndexRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/employer/candidates/$id/passport': {
+      id: '/employer/candidates/$id/passport'
+      path: '/candidates/$id/passport'
+      fullPath: '/employer/candidates/$id/passport'
+      preLoaderRoute: typeof EmployerCandidatesIdPassportRouteImport
+      parentRoute: typeof EmployerRoute
+    }
+    '/student/challenges/$id/': {
+      id: '/student/challenges/$id/'
+      path: '/challenges/$id'
+      fullPath: '/student/challenges/$id/'
+      preLoaderRoute: typeof StudentChallengesIdIndexRouteImport
+      parentRoute: typeof StudentRoute
+    }
+    '/student/challenges/$id/workspace': {
+      id: '/student/challenges/$id/workspace'
+      path: '/challenges/$id/workspace'
+      fullPath: '/student/challenges/$id/workspace'
+      preLoaderRoute: typeof StudentChallengesIdWorkspaceRouteImport
+      parentRoute: typeof StudentRoute
+    }
   }
 }
 
+interface EmployerRouteChildren {
+  EmployerBlindRoute: typeof EmployerBlindRoute
+  EmployerCompareRoute: typeof EmployerCompareRoute
+  EmployerEvidenceRoute: typeof EmployerEvidenceRoute
+  EmployerInterviewRoute: typeof EmployerInterviewRoute
+  EmployerInvitationsRoute: typeof EmployerInvitationsRoute
+  EmployerSettingsRoute: typeof EmployerSettingsRoute
+  EmployerShortlistedRoute: typeof EmployerShortlistedRoute
+  EmployerSubmissionsRoute: typeof EmployerSubmissionsRoute
+  EmployerIndexRoute: typeof EmployerIndexRoute
+  EmployerChallengesNewRoute: typeof EmployerChallengesNewRoute
+  EmployerCandidatesIndexRoute: typeof EmployerCandidatesIndexRoute
+  EmployerChallengesIndexRoute: typeof EmployerChallengesIndexRoute
+  EmployerCandidatesIdPassportRoute: typeof EmployerCandidatesIdPassportRoute
+  EmployerCandidatesIdIndexRoute: typeof EmployerCandidatesIdIndexRoute
+}
+
+const EmployerRouteChildren: EmployerRouteChildren = {
+  EmployerBlindRoute: EmployerBlindRoute,
+  EmployerCompareRoute: EmployerCompareRoute,
+  EmployerEvidenceRoute: EmployerEvidenceRoute,
+  EmployerInterviewRoute: EmployerInterviewRoute,
+  EmployerInvitationsRoute: EmployerInvitationsRoute,
+  EmployerSettingsRoute: EmployerSettingsRoute,
+  EmployerShortlistedRoute: EmployerShortlistedRoute,
+  EmployerSubmissionsRoute: EmployerSubmissionsRoute,
+  EmployerIndexRoute: EmployerIndexRoute,
+  EmployerChallengesNewRoute: EmployerChallengesNewRoute,
+  EmployerCandidatesIndexRoute: EmployerCandidatesIndexRoute,
+  EmployerChallengesIndexRoute: EmployerChallengesIndexRoute,
+  EmployerCandidatesIdPassportRoute: EmployerCandidatesIdPassportRoute,
+  EmployerCandidatesIdIndexRoute: EmployerCandidatesIdIndexRoute,
+}
+
+const EmployerRouteWithChildren = EmployerRoute._addFileChildren(
+  EmployerRouteChildren,
+)
+
+interface StudentRouteChildren {
+  StudentAiTransparencyRoute: typeof StudentAiTransparencyRoute
+  StudentConfidenceRoute: typeof StudentConfidenceRoute
+  StudentExplainRoute: typeof StudentExplainRoute
+  StudentGrowthRoute: typeof StudentGrowthRoute
+  StudentJourneyRoute: typeof StudentJourneyRoute
+  StudentOpportunitiesRoute: typeof StudentOpportunitiesRoute
+  StudentPassportRoute: typeof StudentPassportRoute
+  StudentProfileRoute: typeof StudentProfileRoute
+  StudentRoadmapRoute: typeof StudentRoadmapRoute
+  StudentSettingsRoute: typeof StudentSettingsRoute
+  StudentSubmissionsRoute: typeof StudentSubmissionsRoute
+  StudentTeamRoute: typeof StudentTeamRoute
+  StudentIndexRoute: typeof StudentIndexRoute
+  StudentVerificationIdRoute: typeof StudentVerificationIdRoute
+  StudentChallengesIndexRoute: typeof StudentChallengesIndexRoute
+  StudentVerificationIndexRoute: typeof StudentVerificationIndexRoute
+  StudentChallengesIdWorkspaceRoute: typeof StudentChallengesIdWorkspaceRoute
+  StudentChallengesIdIndexRoute: typeof StudentChallengesIdIndexRoute
+}
+
+const StudentRouteChildren: StudentRouteChildren = {
+  StudentAiTransparencyRoute: StudentAiTransparencyRoute,
+  StudentConfidenceRoute: StudentConfidenceRoute,
+  StudentExplainRoute: StudentExplainRoute,
+  StudentGrowthRoute: StudentGrowthRoute,
+  StudentJourneyRoute: StudentJourneyRoute,
+  StudentOpportunitiesRoute: StudentOpportunitiesRoute,
+  StudentPassportRoute: StudentPassportRoute,
+  StudentProfileRoute: StudentProfileRoute,
+  StudentRoadmapRoute: StudentRoadmapRoute,
+  StudentSettingsRoute: StudentSettingsRoute,
+  StudentSubmissionsRoute: StudentSubmissionsRoute,
+  StudentTeamRoute: StudentTeamRoute,
+  StudentIndexRoute: StudentIndexRoute,
+  StudentVerificationIdRoute: StudentVerificationIdRoute,
+  StudentChallengesIndexRoute: StudentChallengesIndexRoute,
+  StudentVerificationIndexRoute: StudentVerificationIndexRoute,
+  StudentChallengesIdWorkspaceRoute: StudentChallengesIdWorkspaceRoute,
+  StudentChallengesIdIndexRoute: StudentChallengesIdIndexRoute,
+}
+
+const StudentRouteWithChildren =
+  StudentRoute._addFileChildren(StudentRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  EmployerRoute: EmployerRouteWithChildren,
+  EmployersRoute: EmployersRoute,
+  FeaturesRoute: FeaturesRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  LoginRoute: LoginRoute,
+  RegisterRoute: RegisterRoute,
+  StudentRoute: StudentRouteWithChildren,
+  StudentsRoute: StudentsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
